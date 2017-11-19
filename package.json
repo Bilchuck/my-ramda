@@ -1,0 +1,25 @@
+{
+  "name": "my-ramda",
+  "version": "1.0.0",
+  "description": "Ramda like library",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bilchuck/my-ramda.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bilchuck/my-ramda/issues"
+  },
+  "homepage": "https://github.com/Bilchuck/my-ramda#readme",
+  "devDependencies": {
+    "mocha": "^4.0.1"
+  }
+}
