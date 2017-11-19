@@ -12,6 +12,13 @@ const {
 const {
     compose,
 } = require("./core");
+const {
+    minus,
+    add,
+    divide,
+    multiply,
+    inc,
+} = require("./math");
 
 module.exports = {
     curry,
@@ -21,4 +28,9 @@ module.exports = {
     filter,
     forEach,
     compose,
+    minus,
+    add,
+    divide,
+    multiply,
+    inc,
 };
