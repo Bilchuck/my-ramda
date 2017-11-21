@@ -1,4 +1,6 @@
 const { curry } = require("./curry");
+const { revert }= require("./core");
+const { gt } = require("./math");
 
 const reduceRight = curry((fn, start, list) => {
     if (list.length === 0) {
@@ -38,6 +40,17 @@ const forEach = curry((fn, xs) =>
         xs,
     )
 );
+const arrayMerge = curry((xs, ys) => [...xs, ...ys]);
+
+const sort = (fn = gt, arr) => {
+    const [x, ...xs] = arr;
+    switch (arr.length) {
+        case 0: return [];
+        case 1: return [x];
+        default: return [...sort(filter(fn(x), xs)), x, ...sort(filter(revert(fn(x)), xs))];
+    }
+}
+
 
 module.exports = {
     reduceRight,

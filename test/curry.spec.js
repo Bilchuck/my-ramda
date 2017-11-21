@@ -1,12 +1,10 @@
-const { curry } = require('../src');
+const { equal } = require("assert");
+const { curry } = require("../src/index");
 
-const add = curry((x, y) => {
-    return x + y;
+describe("curry function", () => {
+    it("should curry function", () => {
+        const add = curry((x, y) =>  x + y);
+        const inc = add(1);
+        equal(inc(1), 2);
+    });
 });
-
-const inc = add(1);
-
-console.log(`CURRYING`)
-console.log(`inc(3) == ${inc(3)}`);
-console.log(`inc(3) == 4 | ${inc(3) === 4}`);
-console.log(`===============================`)

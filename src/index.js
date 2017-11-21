@@ -9,15 +9,16 @@ const {
     filter,
     forEach,
 } = require("./array");
-const {
-    compose,
-} = require("./core");
+const { revert } = require("./core");
+const { compose } = require("./compose");
 const {
     minus,
     add,
     divide,
     multiply,
     inc,
+    lt,
+    gt,
 } = require("./math");
 
 module.exports = {
@@ -33,4 +34,7 @@ module.exports = {
     divide,
     multiply,
     inc,
+    lt,
+    gt,
+    revert,
 };
