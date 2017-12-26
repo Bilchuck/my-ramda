@@ -1,6 +1,6 @@
 {
-  "name": "my-ramda",
-  "version": "1.0.0",
+  "name": "bilchuck-ramda",
+  "version": "0.0.1",
   "description": "Ramda like library",
   "main": "src/index.js",
   "directories": {
