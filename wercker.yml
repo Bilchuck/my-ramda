@@ -9,4 +9,6 @@ build:
           echo "npm version $(npm -v) running"
 deploy:
   steps:
-    - npm-publish
+    - script:
+        name: Publishing npm
+        code: npm publish
