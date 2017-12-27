@@ -23,6 +23,7 @@ deploy:
           git config --global push.default matching
           git config --global user.email "bilchuck@me.com"
           git config --global user.name "Werker CI"
+          git remote add origin git@github.com:Bilchuck/my-ramda.git
           npm version patch -m "Package version update"
-          git push
+          git push -u origin master
           npm publish
