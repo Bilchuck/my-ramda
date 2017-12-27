@@ -17,7 +17,7 @@ deploy:
     - krlmlr/add-ssh-key-gh-bb@0.0.9:
         keyname: GIT_KEY
     - script:
-        name: Publishing npm
+        name: Publishing to npm
         code: |
           echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}'>.npmrc
           git config --global push.default matching
