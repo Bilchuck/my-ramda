@@ -18,5 +18,4 @@ deploy:
         name: Publishing to npm
         code: |
           echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}'>.npmrc
-          npm version patch -m "Package version update"
           npm publish
