@@ -14,16 +14,9 @@ test:
       code: npm run test
 deploy:
   steps:
-    - krlmlr/add-ssh-key-gh-bb@0.0.9:
-        keyname: GIT_KEY
     - script:
         name: Publishing to npm
         code: |
           echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}'>.npmrc
-          git config --global push.default matching
-          git config --global user.email "bilchuck@me.com"
-          git config --global user.name "Werker CI"
-          git remote set-url origin git@github.com:Bilchuck/my-ramda.git
           npm version patch -m "Package version update"
-          git push -u origin master
           npm publish
