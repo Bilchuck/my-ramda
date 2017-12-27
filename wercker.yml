@@ -14,6 +14,8 @@ test:
       code: npm run test
 deploy:
   steps:
+    - add-ssh-key-gh-bb:
+        keyname: ${GIT_KEY}
     - script:
         name: Publishing npm
         code: |
