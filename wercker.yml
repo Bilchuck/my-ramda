@@ -7,10 +7,17 @@ build:
         code: |
           echo "node version $(node -v) running"
           echo "npm version $(npm -v) running"
+test:
+  steps:
+    - script:
+      name: Test of module
+      code: npm run test
 deploy:
   steps:
     - script:
         name: Publishing npm
         code: |
           echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}'>.npmrc
+          npm version patch -m "Package version update"
+          git push
           npm publish
