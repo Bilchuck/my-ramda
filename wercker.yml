@@ -11,5 +11,6 @@ deploy:
   steps:
     - script:
         name: Publishing npm
-        code: echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}'>.npmrc
-              npm publish
+        code: |
+          echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}'>.npmrc
+          npm publish
