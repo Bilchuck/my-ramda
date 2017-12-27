@@ -18,6 +18,8 @@ deploy:
         name: Publishing npm
         code: |
           echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}'>.npmrc
+          git config --global user.email "bilchuck@me.com"
+          git config --global user.name "Werker CI"
           npm version patch -m "Package version update"
           git push
           npm publish
