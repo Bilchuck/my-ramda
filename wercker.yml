@@ -14,7 +14,7 @@ test:
       code: npm run test
 deploy:
   steps:
-    - krlmlr/add-ssh-key-gh-bb@0.0.9:
+    - add-ssh-key-gh-bb:
         keyname: GIT_KEY
     - script:
         name: Publishing npm
