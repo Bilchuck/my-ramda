@@ -1,5 +1,8 @@
 // exports
-const { curry } = require("./curry");
+const { 
+    curry,
+    __,
+} = require("./lib/curry");
 const { 
     reduceRight,
     reduceLeft,
@@ -8,9 +11,9 @@ const {
     map,
     filter,
     forEach,
-} = require("./array");
-const { revert } = require("./core");
-const { compose } = require("./compose");
+} = require("./lib/array");
+const { revert } = require("./lib/core");
+const { compose } = require("./lib/compose");
 const {
     minus,
     add,
@@ -19,10 +22,24 @@ const {
     inc,
     lt,
     gt,
-} = require("./math");
+} = require("./lib/math");
+const {
+    lens,
+    lensIndex,
+    lensPath,
+    lensProp,
+    over,
+    set,
+    view,
+    path,
+    prop,
+    assoc,
+    assocPath,
+} = require("./lib/object");
 
 module.exports = {
     curry,
+    __,
     reduceRight,
     reduceLeft,
     map,
@@ -37,4 +54,15 @@ module.exports = {
     lt,
     gt,
     revert,
+    lens,
+    lensIndex,
+    lensPath,
+    lensProp,
+    over,
+    set,
+    view,
+    path,
+    prop,
+    assoc,
+    assocPath,
 };

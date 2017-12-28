@@ -1,5 +1,5 @@
 const { equal } = require("assert");
-const { compose, curry, add, multiply } = require("../src/index");
+const { compose, curry, add, multiply } = require("../index");
 
 describe("core functions", () => {
     describe("compose", () => {

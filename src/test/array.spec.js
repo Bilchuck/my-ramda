@@ -6,7 +6,7 @@ const {
     map,
     filter,
     gt,
-} = require("../src/index");
+} = require("../index");
 
 const add = curry((x, y) => x + y);
 const inc = add(1);
