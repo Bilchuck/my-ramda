@@ -6,7 +6,7 @@ install:
 test: 
   - npm run test
 before_deploy:
-  - npm release patch
+  - npm version patch
   - git push
 deploy:
   provider: npm
