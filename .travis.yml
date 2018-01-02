@@ -10,7 +10,7 @@ before_deploy:
   - git config --global user.name "Travis CI"
 
   - "echo $GH_TOKEN"
-  - "echo GH_TOKEN"
+  - "echo GH_TOKEN "
   - "echo ${GH_TOKEN}"
 
 
