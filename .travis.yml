@@ -5,6 +5,9 @@ install:
   - npm install
 test: 
   - npm run test
+before_deploy:
+  - npm release patch
+  - git push
 deploy:
   provider: npm
   email: "YOUR_EMAIL_ADDRESS"
