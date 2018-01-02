@@ -9,9 +9,9 @@ before_deploy:
   - git config --global user.email "travis@travis-ci.org"
   - git config --global user.name "Travis CI"
 
-  - echo "$GH_TOKEN"
+  - "echo $GH_TOKEN"
   - echo $GH_TOKEN
-  - echo ${GH_TOKEN}
+  - "echo ${GH_TOKEN}"
 
 
   - git remote add origin https://"$GH_TOKEN"@github.com/Bilchuck/my-ramda.git > /dev/null 2>&1
