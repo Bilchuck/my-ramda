@@ -15,6 +15,6 @@ before_deploy:
   - git push origin HEAD:master
 deploy:
   provider: npm
-  email: "YOUR_EMAIL_ADDRESS"
+  email: "bilchuck@me.com"
   api_key: ${NPM_TOKEN}
   tag: next
