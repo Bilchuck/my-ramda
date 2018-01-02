@@ -7,7 +7,7 @@ test:
   - npm run test
 before_deploy:
   - npm version patch
-  - git push
+  - git push origin HEAD:https://github.com/Bilchuck/my-ramda.git
 deploy:
   provider: npm
   email: "YOUR_EMAIL_ADDRESS"
