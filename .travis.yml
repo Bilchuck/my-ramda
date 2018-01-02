@@ -9,6 +9,10 @@ before_deploy:
   - git config --global user.email "travis@travis-ci.org"
   - git config --global user.name "Travis CI"
 
+  - echo GH_TOKEN
+  - echo $GH_TOKEN
+  - echo ${GH_TOKEN}
+
 
   - git remote add origin https://GH_TOKEN@github.com/Bilchuck/my-ramda.git > /dev/null 2>&1
   - npm version patch
@@ -16,5 +20,5 @@ before_deploy:
 deploy:
   provider: npm
   email: "bilchuck@me.com"
-  api_key: NPM_TOKEN
+  api_key: $NPM_TOKEN
   tag: next
