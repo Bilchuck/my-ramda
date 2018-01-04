@@ -18,6 +18,10 @@ deploy:
     all_branches: true
     file: "package.json"
     skip_cleanup: true
+    on:
+      repo: Bilchuck/my-ramda
+      tags: true
+      all_branches: true
   # - provider: npm
   #   email: "bilchuck@me.com"
   #   api_key: $NPM_TOKEN
