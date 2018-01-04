@@ -13,10 +13,10 @@ before_deploy:
   - npm version patch
 deploy:
   - provider: releases
-    api_key: GH_TOKEN
+    api_key: $GH_TOKEN
     file: "package.json"
     skip_cleanup: true
-  - provider: npm
-    email: "bilchuck@me.com"
-    api_key: $NPM_TOKEN
-    tag: next
+  # - provider: npm
+  #   email: "bilchuck@me.com"
+  #   api_key: $NPM_TOKEN
+  #   tag: next
