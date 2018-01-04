@@ -10,7 +10,6 @@ before_deploy:
     # Set up git user name and tag this commit
   - git config --global user.email "travis@travis-ci.org"
   - git config --global user.name "Travis CI"
-  - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
   - npm version patch
 deploy:
   - provider: releases
