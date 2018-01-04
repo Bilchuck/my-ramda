@@ -20,7 +20,6 @@ deploy:
     skip_cleanup: true
     on:
       repo: Bilchuck/my-ramda
-      tags: true
       all_branches: true
   # - provider: npm
   #   email: "bilchuck@me.com"
