@@ -46,6 +46,6 @@ deploy:
         npm version patch
         npm publish
 
-        npm view bilchuck-ramda version | git tag
+        git tag $(npm view bilchuck-ramda version)
 
         git push origin master
