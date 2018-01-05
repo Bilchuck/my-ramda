@@ -41,9 +41,9 @@ deploy:
         git config --global user.email "werker@werker.org"
         git config --global user.name "Werker CI"
 
-        npm version patch
 
         echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}'>.npmrc
+        npm version patch
         npm publish
 
         npm view bilchuck-ramda version | git tag
