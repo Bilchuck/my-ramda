@@ -48,4 +48,4 @@ deploy:
 
         npm view bilchuck-ramda version | git tag
 
-        git push
+        git push origin master
