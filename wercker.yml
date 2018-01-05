@@ -48,5 +48,6 @@ deploy:
 
         git tag $(npm view bilchuck-ramda version)
         echo "Tagged"
+        ssh-keygen -R git@github.com
         ssh -vvv git@github.com
         git push origin master
