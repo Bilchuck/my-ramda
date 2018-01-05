@@ -25,4 +25,8 @@ deploy:
   - provider: npm
     email: "bilchuck@me.com"
     api_key: $NPM_TOKEN
-    tag: next
+    on:
+      tags: true
+      repo: Bilchuck/my-ramda
+      branch: master
+      condition: "$TRAVIS_COMMIT_MESSAGE == *'Merge'*"
