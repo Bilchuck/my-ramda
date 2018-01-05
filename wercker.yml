@@ -47,5 +47,5 @@ deploy:
         npm publish
 
         git tag $(npm view bilchuck-ramda version)
-
+        echo "Tagged"
         git push origin master
