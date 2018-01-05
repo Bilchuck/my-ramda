@@ -20,7 +20,7 @@ deploy:
     on:
       tags: true
       repo: Bilchuck/my-ramda
-      branch: master
+      all_branches: true
       condition: "$TRAVIS_COMMIT_MESSAGE == *'Merge'*"
   - provider: npm
     email: "bilchuck@me.com"
@@ -28,5 +28,5 @@ deploy:
     on:
       tags: true
       repo: Bilchuck/my-ramda
-      branch: master
+      all_branches: true
       condition: "$TRAVIS_COMMIT_MESSAGE == *'Merge'*"
