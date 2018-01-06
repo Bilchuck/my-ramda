@@ -1,0 +1,2 @@
+npm version patch -m "Deploying new npm package version - %s"
+git push
