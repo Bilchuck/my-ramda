@@ -9,13 +9,18 @@ test:
 before_deploy:
   - git config --global user.email "travis@travis-ci.org"
   - git config --global user.name "Travis CI"
-  - npm version patch
 deploy:
   - provider: releases
     api_key: $GH_TOKEN
     all_branches: true
     file: "package.json"
     skip_cleanup: true
+    on:
+      all_branches: true
+      condition: "$TRAVIS_COMMIT_MESSAGE == *'Merge'*"
+  - provider: script
+    skip_cleanup: true
+    script: "npm version patch"
     on:
       all_branches: true
       condition: "$TRAVIS_COMMIT_MESSAGE == *'Merge'*"
