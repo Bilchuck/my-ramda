@@ -6,6 +6,7 @@ const {
     map,
     filter,
     gt,
+    forEach,
 } = require("../index");
 
 const add = curry((x, y) => x + y);
@@ -37,6 +38,14 @@ describe("array functions", () => {
             const arr = [0,1,2,3,4,5,6];
             const arr_filtered = filter(gt(3), arr);
             deepEqual(arr_filtered, [0,1,2]);
+        });
+    });
+    describe("forEach function", () => {
+        it("should run function for every element of array", () => {
+            const arr = [0,1,2,3,4,5,6];
+            const res = [];
+            forEach(x => res.push(x), arr);
+            deepEqual(arr, res);
         });
     });
 });

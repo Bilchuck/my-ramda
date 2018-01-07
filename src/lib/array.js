@@ -33,11 +33,11 @@ const filter = curry((fn, xs) =>
         xs,
     )
 );
-const forEach = curry((fn, [head, ...tail]) => 
+const forEach = curry((fn, xs) => 
     reduceLeft(
-        (x, acc) => fn(x),
-        head,
-        tail,
+        (_, x) => fn(x),
+        null,
+        xs,
     )
 );
 const arrayMerge = curry((xs, ys) => [...xs, ...ys]);
