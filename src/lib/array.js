@@ -34,7 +34,7 @@ const filter = curry((fn, xs) =>
     )
 );
 const forEach = curry((fn, xs) => 
-    reduceRight(
+    reduceLeft(
         (x, acc) => fn(x),
         null,
         xs,
