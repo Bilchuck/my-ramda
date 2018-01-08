@@ -1,5 +1,5 @@
 const { curry } = require("./curry");
-const { revert }= require("./core");
+const { revert }= require("./boolean");
 const { gt } = require("./math");
 
 const reduceRight = curry((fn, start, list) => {
@@ -51,6 +51,7 @@ const sort = (fn = gt, arr) => {
     }
 }
 
+const zip = curry(([x1, ...xs1], [x2, ...xs2]) => xs1.length && xs2.length ? [[x1, x2], ...zip(xs1, xs2)] : [[x1, x2]]);
 
 module.exports = {
     reduceRight,
@@ -60,4 +61,5 @@ module.exports = {
     map,
     filter,
     forEach,
+    zip,
 };

@@ -11,8 +11,8 @@ const {
     map,
     filter,
     forEach,
+    zip,
 } = require("./lib/array");
-const { revert } = require("./lib/core");
 const { compose } = require("./lib/compose");
 const {
     minus,
@@ -36,6 +36,10 @@ const {
     assoc,
     assocPath,
 } = require("./lib/object");
+const { 
+    isNil,
+    revert,
+} = require("./lib/boolean")
 
 module.exports = {
     curry,
@@ -45,6 +49,7 @@ module.exports = {
     map,
     filter,
     forEach,
+    zip,
     compose,
     minus,
     add,

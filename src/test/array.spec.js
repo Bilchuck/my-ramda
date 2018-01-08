@@ -7,6 +7,7 @@ const {
     filter,
     gt,
     forEach,
+    zip,
 } = require("../index");
 
 const add = curry((x, y) => x + y);
@@ -46,6 +47,14 @@ describe("array functions", () => {
             const res = [];
             forEach(x => res.push(x), arr);
             deepEqual(arr, res);
+        });
+    });
+    describe("zip function", () => {
+        it("should creates list out of the two supplied by pairing up equally-positioned items from both lists. ", () => {
+            const arr1 = [1,2,3];
+            const arr2 = [1,2,3, 4];
+            const res = zip(arr1, arr2);
+            deepEqual(res, [[1,1], [2,2], [3,3]]);
         });
     });
 });
